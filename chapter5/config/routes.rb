@@ -1,5 +1,11 @@
 Chapter5::Application.routes.draw do
-  # The priority is based upon order of creation:
+  get "users/new"
+  match "/signup", to: 'users#new'
+  match '/help', to: 'chapter5#help'
+  match '/about', to: 'chapter5#about'
+  match '/contact', to: 'chapter5#contact'
+  root to: 'chapter5#home'
+# The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
